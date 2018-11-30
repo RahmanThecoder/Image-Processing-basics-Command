@@ -1,0 +1,71 @@
+>> a=imread('C:\Users\Asus\Desktop\IMG_4779.jpg');
+>> imshow (a)
+Warning: Image is too big to fit on screen;
+displaying at 17% 
+> In images.internal.initSize (line 71)
+  In imshow (line 309) 
+>> figure()
+>> subplot(221);imshow(a)
+>> b=imread('C:\Users\Asus\Desktop\2html.jpg');
+Error using imread (line 349)
+File "C:\Users\Asus\Desktop\2html.jpg" does not
+exist.
+ 
+>> b=imread('C:\Users\Asus\Desktop\2html.png');
+>> subplot(224);imshow(b)
+>> imshow(a,b)
+Error using
+images.internal.imageDisplayParsePVPairs (line 125)
+Invalid input arguments.
+
+Error in images.internal.imageDisplayParseInputs
+(line 69)
+[common_args,specific_args] =
+images.internal.imageDisplayParsePVPairs(varargin{:});
+
+Error in imshow (line 222)
+      images.internal.imageDisplayParseInputs({'Parent','Border','Reduce'},preparsed_varargin{:}); 
+>> size(a)
+
+ans =
+
+        3456        5184           3
+
+>> a[100,200];
+ a[100,200];
+  ↑
+Error: Unbalanced or unexpected parenthesis or
+bracket.
+ 
+>> a(100,200);
+>> a(100,200);
+>> a(100,200)
+
+ans =
+
+   52
+
+>> colormap(jet)
+>> imshow(b)
+>> colormap(jet)
+>> colormap(spring)
+>> impixelinfo
+Error using impixelinfo>parseInputs (line 167)
+IMPIXELINFO expects a current figure containing
+at least one image.
+
+Error in impixelinfo (line 62)
+[h,parent] = parseInputs(varargin{:});
+ 
+>> img1=unit8(zeros(512,1024));
+Undefined function or variable 'unit8'.
+ 
+Did you mean:
+>> img1=uint8(zeros(512,1024));
+>> img2 =unit8(255* ones(512,1024));
+Undefined function or variable 'unit8'.
+ 
+Did you mean:
+>> img2 =uint8(255* ones(512,1024));
+>> imshow(img2)
+>> 
